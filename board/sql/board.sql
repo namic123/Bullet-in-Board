@@ -1,0 +1,7 @@
+CREATE DATABASE board;
+use board;
+CREATE TABLE board (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(45) NOT NULL,
+    content TEXT NOT NULL
+)
