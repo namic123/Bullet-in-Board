@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<!--타임리프 사용할 수 있는 문번-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><head>
+   <head>
+    <meta charset="UTF-8">
+    <title>게시글 상세 페이지</title>
+</head>
+<body>
+    <h1 th:text="${board.title}">제목입니다.</h1>
+    <p th:text="${board.content}">내용이 들어갈 부분</p>
+</body>
+</html>
