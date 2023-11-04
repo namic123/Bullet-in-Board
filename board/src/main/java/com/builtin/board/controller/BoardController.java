@@ -21,9 +21,10 @@ public class BoardController {
     }
 
     @PostMapping("/board/writepro")
-    public String boardWritePro(Board board){
+    public String boardWritePro(Board board, RedirectAttributes rttr){
         boardService.write(board);
-        return "";
+        rttr.addFlashAttribute("message","게시글이 생성되었습니다.");
+        return "redirect:/board/list";
     }
     @GetMapping("/board/list")
     public String boardlist(Model model) {
