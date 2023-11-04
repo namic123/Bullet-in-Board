@@ -5,9 +5,11 @@ import com.builtin.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequiredArgsConstructor
@@ -32,5 +34,12 @@ public class BoardController {
     public String boardView(Model model, Integer id) { // localhost:8080/board/view?id=1
         model.addAttribute("board",boardService.boardView(id));
         return "boardview";
+    }
+
+    @GetMapping("/board/delete")
+    public String boardDelete(Integer id, RedirectAttributes rttr){
+        boardService.boardDelete(id);
+        rttr.addFlashAttribute("message", "게시글이 삭제되었습니다.");
+    return "redirect:/board/list";
     }
 }
