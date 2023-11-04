@@ -4,6 +4,7 @@ import com.builtin.board.entity.Board;
 import com.builtin.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,5 +22,10 @@ public class BoardController {
     public String boardWritePro(Board board){
         boardService.write(board);
         return "";
+    }
+    @GetMapping("/board/list")
+    public String boardlist(Model model) {
+        model.addAttribute("list",boardService.boardList());
+        return "boardlist";
     }
 }
