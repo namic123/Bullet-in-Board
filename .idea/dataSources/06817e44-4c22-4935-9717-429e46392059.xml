@@ -1353,16 +1353,16 @@
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="508" parent="1" name="board">
-      <IntrospectionTimestamp>2023-11-05.07:49:26</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-04.13:49:26</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-11-05.07:56:28</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-04.13:56:28</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="509" parent="1" name="information_schema">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="510" parent="1" name="mydb1">
-      <IntrospectionTimestamp>2023-11-05.07:49:26</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-04.13:49:26</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-11-05.07:56:28</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-04.13:56:28</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="511" parent="1" name="mysql">
@@ -1375,8 +1375,8 @@
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="514" parent="1" name="w3schools">
-      <IntrospectionTimestamp>2023-11-05.07:49:26</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-04.13:49:26</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-11-05.07:56:28</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-04.13:56:28</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <user id="515" parent="1" name="mariadb.sys">

@@ -9,6 +9,7 @@ CREATE TABLE board (
 
 # MySQL 프로시저 testDataInsert는 테스트 데이터를 board 테이블에 삽입하기 위한 것
 # 프로시저를 실행하면, '제목1', '내용1'부터 시작하여 '제목120', '내용120'까지 총 120개의 행이 board 테이블에 삽입
+DROP PROCEDURE IF EXISTS testDataInsert;
 CREATE PROCEDURE testDataInsert()
 BEGIN
     DECLARE i INT DEFAULT 1;
@@ -19,3 +20,5 @@ BEGIN
         SET i = i +1;
         end while;
 end;
+
+CALL testDataInsert();
