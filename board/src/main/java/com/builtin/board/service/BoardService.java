@@ -3,9 +3,11 @@ package com.builtin.board.service;
 import com.builtin.board.entity.Board;
 import com.builtin.board.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import org.springframework.data.domain.Pageable;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -42,8 +44,8 @@ public class BoardService {
     }
 
     // 게시글 리스트 처리
-    public List<Board> boardList(){
-       return boardRepository.findAll(); //  연결된 데이터베이스의 테이블에 저장된 모든 엔티티를 조회하는 기능
+    public Page<Board> boardList(Pageable pageable){ // 페이징 처리
+       return boardRepository.findAll(pageable); //  연결된 데이터베이스의 테이블에 저장된 모든 엔티티를 조회하는 기능
     }
 
     // 특정 게시글 불러오기
