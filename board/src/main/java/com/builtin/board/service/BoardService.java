@@ -34,6 +34,9 @@ public class BoardService {
         // MultipartFile.transferTo - 업르드된 파일을 지정된 위치에 저장
         file.transferTo(saveFile);
 
+        board.setFilename(fileName);
+        board.setFilepath("/files/"+ fileName);
+
         // board 엔티티를 DB에 저장
         boardRepository.save(board);
     }
