@@ -1,10 +1,12 @@
+# board db 생성
 CREATE DATABASE board;
 use board;
+# board table 생성
 CREATE TABLE board (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(45) NOT NULL,
-    content TEXT NOT NULL
-)
+    content TEXT NOT NULL,
+);
 
 
 # MySQL 프로시저 testDataInsert는 테스트 데이터를 board 테이블에 삽입하기 위한 것
@@ -20,5 +22,11 @@ BEGIN
         SET i = i +1;
         end while;
 end;
-
 CALL testDataInsert();
+
+
+# board 파일 column 추가
+ALTER TABLE board ADD COLUMN (
+    filename VARCHAR(150),
+    filepath VARCHAR(300)
+    );
